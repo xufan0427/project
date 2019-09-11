@@ -1,0 +1,14 @@
+com\controller\ManagerComtroller.class
+com\fan\pojo\TbUser.class
+com\fan\pojo\TbUserExample$GeneratedCriteria.class
+com\fan\service\UserService.class
+com\fan\mybatis\typehandler\JodaDateTime2TimeTypeHandler.class
+com\fan\pojo\TbUserExample.class
+com\fan\util\Util.class
+com\fan\mybatis\typehandler\JodaDateTime2DateTypeHandler.class
+com\fan\mybatis\typehandler\JodaDateTime2TimestampTypeHandler.class
+com\fan\util\Test.class
+com\fan\pojo\TbUserExample$Criteria.class
+com\RegisterMain.class
+com\fan\pojo\TbUserExample$Criterion.class
+com\fan\mapper\TbUserMapper.class

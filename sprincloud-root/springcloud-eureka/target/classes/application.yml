@@ -1,0 +1,55 @@
+server:
+  port: 18888
+ 
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url: 
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+spring: 
+  application: 
+    name: springboot-eureka-server
+  jackson: 
+    date-format: "yyyy-MM-dd HH:mm:ss" 
+    time-zone: GMT+8
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://132.232.70.78:3306/e3mall-32?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: mmy1529622mmy
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20 
+  redis:
+    host: 132.232.70.78
+    port: 6379
+    database: 0
+    password: mmy1529622mmy
+    pool:
+      max-idle:  8
+      min-idle:  0
+      max-active:  8
+      max-wait:  -1
+      
+      
+mybatis:
+  typeAliasesPackage: com.fan.mapper 
+  mapperLocations: classpath:/mybatis/sqlmap/*.xml 
+  configLocation: classpath:/mybatis/mybatis-config.xml 
+logging:
+  config:
+   classpath:logback-boot.xml  
